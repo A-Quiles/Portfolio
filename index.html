@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonio Quiles Díaz</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900">
+    <!-- Luz que sigue al cursor -->
+    <div class="luz" id="luz"></div>
+
+    <!-- Banner principal -->
+    <div
+      class="banner w-full text-white text-center flex flex-col items-center justify-center h-screen"
+    >
+      <h2 class="text-6xl">Antonio Quiles Díaz</h2>
+      <h2 class="text-sky-300 text-5xl mb-6 animate-bombilla">
+        Software Developer
+      </h2>
+
+      <!-- Botón para direccionar al apartado "Sobre Mi" -->
+      <div class="flex">
+        <button class="border rounded-md p-2">
+          <a href="#sobre-mi">Sobre Mi</a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sección Sobre Mi -->
+    <div id="sobre-mi" class="p-6 rounded-xl mt-10 mx-auto max-w-4xl">
+      <h2 class="text-4xl text-white text-center mb-4">Sobre Mi</h2>
+      <div class="flex flex-col sm:flex-row items-center">
+        <!-- Imagen de perfil -->
+        <div class="sm:w-1/3 mb-4 sm:mb-0">
+          <img
+            src="/asserts/foto-perfil2.png"
+            class="w-full h-auto rounded-lg"
+          />
+        </div>
+        <!-- Texto descriptivo -->
+        <div class="sm:w-2/3 sm:pl-6">
+          <p class="text-white text-lg">
+            Actualmente trabajo como
+            <span class="text-sky-300">Full Stack Developer</span> en
+            <span class="text-red-500">Fujitsu</span>, una empresa
+            multinacional. Me he especializado en tecnologías como Java, Api
+            Rest, Angular, React, contribuyendo a proyectos que abordan
+            problemas sociales importantes, como la violencia de género.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Experiencia Laboral -->
+    <div
+      id="experiencia-laboral"
+      class="seccion p-6 rounded-xl shadow-lg mt-10 mx-auto max-w-4xl"
+    >
+      <h2 class="text-4xl text-white text-center mb-4">Experiencia Laboral</h2>
+      <div class="flex flex-col">
+        <!-- Experiencia en Fujitsu -->
+        <div class="mb-6">
+          <span class="text-2xl font-semibold text-red-500">Fujitsu</span
+          ><span class="text-2xl font-semibold text-gray-300">
+            - Full Stack Developer</span
+          >
+          <p class="text-white text-lg">2023 - Actualidad</p>
+          <p class="text-white text-lg mt-2">
+            Actualmente trabajo como Full Stack Developer en Fujitsu, una
+            empresa multinacional. Me he especializado en tecnologías como Java,
+            Api Rest, Angular, React, contribuyendo a proyectos que abordan
+            problemas sociales importantes, como la violencia de género.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Habilidades -->
+    <div class="mt-20 text-center">
+      <h2 class="habilidades text-4xl text-white">Habilidades</h2>
+    </div>
+
+    <div
+      class="p-6 rounded-xl shadow-lg mt-8 mx-auto max-w-4xl animate-on-scroll"
+    >
+      <div class="grid grid-cols-3 sm:grid-cols-4 gap-4">
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/postman.svg"
+            alt="Api Rest"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Api Rest</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/java.svg"
+            alt="Java"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Java</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/springboot.svg"
+            alt="Spring Boot"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Spring Boot</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/angularjs.svg"
+            alt="AngularJs"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">AngularJs</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg"
+            alt="React"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">React</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/node-dot-js.svg"
+            alt="NodeJs"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">NodeJs</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"
+            alt="GitHub"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">GitHub</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/subversion.svg"
+            alt="SVN"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">SVN</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tailwindcss.svg"
+            alt="Tailwind"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Tailwind</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bootstrap.svg"
+            alt="Bootstrap"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Bootstrap</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/junit.svg"
+            alt="JUnit"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">JUnit</p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mockito.svg"
+            alt="Mockito"
+            class="w-8 h-8 filter invert"
+          />
+          <p class="text-white font-semibold">Mockito</p>
+        </div>
+      </div>
+    </div>
+    <!-- Sección de Contacto -->
+    <div
+      id="contacto"
+      class="seccion p-6 rounded-xl shadow-lg mt-10 mx-auto max-w-4xl"
+    >
+      <h2 class="text-4xl text-sky-300 text-center mb-4">Contacto</h2>
+      <p class="text-white text-lg text-center mb-8">
+        Si deseas ponerte en contacto conmigo, puedes enviarme un correo
+        electrónico a la siguiente dirección:
+      </p>
+
+      <!-- Correo electrónico con animación de parpadeo -->
+      <div class="text-center">
+        <a
+          href="mailto:antonioquiles.dev@gmail.com"
+          class="text-sky-300 text-xl correo"
+        >
+          antonioquiles.dev@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer class="bg-gray-800 text-white py-6 mt-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-sm">
+          &copy; 2025 Antonio Quiles Díaz. Todos los derechos reservados.
+        </p>
+        <div class="mt-4 flex justify-center space-x-4">
+          <a
+            href="https://www.linkedin.com/in/antonio-quiles-d%C3%ADaz-a60887198/"
+            target="_blank"
+            class="hover:text-sky-300"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/tu-usuario"
+            target="_blank"
+            class="hover:text-sky-300"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

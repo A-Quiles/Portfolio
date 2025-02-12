@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  transition: all 0.8s ease-in-out;
+}
+
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffffa1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111827;
+  border-radius: 10px;
+}
+
+h2 {
+  font-family: "Tourney", serif;
+}
+
+p,
+button,
+a {
+  font-family: "Goldman", serif;
+}
+.luz {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.121) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+@keyframes flicker {
+  0%,
+  4% {
+    opacity: 0.8;
+  }
+  5%,
+  7% {
+    opacity: 0.3;
+  }
+  8%,
+  10% {
+    opacity: 0.7;
+  }
+  11%,
+  14% {
+    opacity: 0.2;
+  }
+  15%,
+  18% {
+    opacity: 0.8;
+  }
+  19%,
+  21% {
+    opacity: 0.4;
+  }
+  22%,
+  25% {
+    opacity: 0.8;
+  }
+  26%,
+  28% {
+    opacity: 0.2;
+  }
+  29%,
+  32% {
+    opacity: 0.7;
+  }
+  33%,
+  36% {
+    opacity: 0.5;
+  }
+  37%,
+  40% {
+    opacity: 0.8;
+  }
+  41%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.animate-bombilla {
+  animation: flicker 4s infinite ease-in-out;
+}
+
+/* Efecto flicker para el parpadeo de las habilidades */
+@keyframes flickerHabilidades {
+  0%,
+  10% {
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  15%,
+  20% {
+    opacity: 0.4;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  }
+  25%,
+  30% {
+    opacity: 0.7;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);
+  }
+  35%,
+  40% {
+    opacity: 0.3;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.15);
+  }
+  45%,
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+  55%,
+  60% {
+    opacity: 0.2;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+  }
+  65%,
+  70% {
+    opacity: 0.5;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  }
+  75%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+h3 {
+  animation: flickerHabilidades 2.5s infinite alternate;
+}
+
+/* Clase de habilidades apagadas, con una opacidad baja */
+.habilidad {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Cuando la habilidad parpadea aleatoriamente */
+.habilidad.active {
+  animation: flickerHabilidades 2s infinite;
+}
+
+.habilidad:hover {
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animación de aparición para la sección de Habilidades */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto flicker para el parpadeo del correo electronico */
+@keyframes parpadeocorreo {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.correo {
+  animation: parpadeocorreo 2s infinite;
+}
+
+/* Efecto del borde en la seccion experiencia laboral */
+.seccion {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
