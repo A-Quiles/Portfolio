@@ -9,7 +9,7 @@
   </head>
   <body class="bg-gray-900">
     <!-- Luz que sigue al cursor -->
-    <div class="luz" id="luz"></div>
+    <div class="luz hidden sm:block" id="luz"></div>
 
     <!-- Banner principal -->
     <div
@@ -63,10 +63,10 @@
         <!-- Experiencia en Fujitsu -->
         <div class="mb-6">
           <span class="text-2xl font-semibold text-red-500">Fujitsu</span
-          ><span class="text-2xl font-semibold text-gray-300">
+          ><span class="text-2xl font-semibold text-white">
             - Full Stack Developer</span
           >
-          <p class="text-white text-lg">2023 - Actualidad</p>
+          <p class="text-gray-300 text-lg">2023 - Actualidad</p>
           <p class="text-white text-lg mt-2">
             Actualmente trabajo como Full Stack Developer en Fujitsu, una
             empresa multinacional. Me he especializado en tecnologías como Java,
@@ -89,11 +89,6 @@
         <div
           class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
         >
-          <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/postman.svg"
-            alt="Api Rest"
-            class="w-8 h-8 filter invert"
-          />
           <p class="text-white font-semibold">Api Rest</p>
         </div>
         <div
@@ -102,7 +97,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/java.svg"
             alt="Java"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">Java</p>
         </div>
@@ -112,7 +107,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/springboot.svg"
             alt="Spring Boot"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">Spring Boot</p>
         </div>
@@ -122,7 +117,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/angularjs.svg"
             alt="AngularJs"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">AngularJs</p>
         </div>
@@ -132,7 +127,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg"
             alt="React"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">React</p>
         </div>
@@ -142,7 +137,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/node-dot-js.svg"
             alt="NodeJs"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">NodeJs</p>
         </div>
@@ -152,7 +147,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"
             alt="GitHub"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">GitHub</p>
         </div>
@@ -162,7 +157,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/subversion.svg"
             alt="SVN"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">SVN</p>
         </div>
@@ -172,7 +167,7 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tailwindcss.svg"
             alt="Tailwind"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">Tailwind</p>
         </div>
@@ -182,28 +177,23 @@
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bootstrap.svg"
             alt="Bootstrap"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
-          <p class="text-white font-semibold">Bootstrap</p>
+          <p class="text-white font-semiboldk">Bootstrap</p>
         </div>
         <div
           class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
         >
           <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/junit.svg"
+            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/junit5.svg"
             alt="JUnit"
-            class="w-8 h-8 filter invert"
+            class="w-8 h-8 filter invert hidden sm:block"
           />
           <p class="text-white font-semibold">JUnit</p>
         </div>
         <div
           class="flex items-center justify-center gap-2 bg-gray-700 p-4 rounded-lg habilidad"
         >
-          <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mockito.svg"
-            alt="Mockito"
-            class="w-8 h-8 filter invert"
-          />
           <p class="text-white font-semibold">Mockito</p>
         </div>
       </div>
@@ -233,8 +223,9 @@
     <!-- Pie de pagina -->
     <footer class="bg-gray-800 text-white py-6 mt-20">
       <div class="max-w-4xl mx-auto text-center">
-        <p class="text-sm">
-          &copy; 2025 Antonio Quiles Díaz. Todos los derechos reservados.
+        <p class="text-sm font-semibold">&copy; 2025 Antonio Quiles Díaz.</p>
+        <p class="text-sm italic text-gray-400">
+          Compilando sueños, depurando errores.
         </p>
         <div class="mt-4 flex justify-center space-x-4">
           <a
