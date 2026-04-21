@@ -3,210 +3,228 @@
 
 html {
   scroll-behavior: smooth;
-  transition: all 0.8s ease-in-out;
 }
 
-/* Personaliza la barra de desplazamiento */
-::-webkit-scrollbar {
-  width: 10px;
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background-color: #38bdf8; border-radius: 10px; }
+::-webkit-scrollbar-track { background-color: #111827; }
+
+/* ── BARRA DE PROGRESO ── */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: #38bdf8;
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s linear;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #ffffffa1;
-  border-radius: 10px;
-}
+/* ── TIPOGRAFÍA ── */
+h2 { font-family: "Tourney", serif; }
+p, button, a, span { font-family: "Goldman", serif; }
 
-::-webkit-scrollbar-track {
-  background-color: #111827;
-  border-radius: 10px;
-}
-
-h2 {
-  font-family: "Tourney", serif;
-}
-
-p,
-button,
-a {
-  font-family: "Goldman", serif;
-}
+/* ── LUZ CURSOR ── */
 .luz {
   position: fixed;
   width: 400px;
   height: 400px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.121) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle, rgba(56,189,248,0.07) 0%, rgba(255,255,255,0) 70%);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 1;
 }
 
+/* ── NAVBAR ── */
+#navbar {
+  background: transparent;
+}
+#navbar.scrolled {
+  background: rgba(17, 24, 39, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+}
+.nav-logo {
+  font-family: "Tourney", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.nav-link {
+  font-family: "Goldman", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: #38bdf8 !important; }
+
+/* ── HERO ANIMATIONS ── */
+.hero-title {
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.hero-subtitle {
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+.hero-btn {
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+.scroll-arrow {
+  transition: opacity 0.8s ease 1s;
+}
+.hero-title.visible,
+.hero-subtitle.visible,
+.hero-btn.visible,
+.scroll-arrow.visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+/* Cursor parpadeante del typewriter */
+.cursor-blink {
+  animation: blink 0.7s infinite;
+  color: #38bdf8;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── FLICKER BOMBILLA ── */
 @keyframes flicker {
-  0%,
-  4% {
-    opacity: 0.8;
-  }
-  5%,
-  7% {
-    opacity: 0.3;
-  }
-  8%,
-  10% {
-    opacity: 0.7;
-  }
-  11%,
-  14% {
-    opacity: 0.2;
-  }
-  15%,
-  18% {
-    opacity: 0.8;
-  }
-  19%,
-  21% {
-    opacity: 0.4;
-  }
-  22%,
-  25% {
-    opacity: 0.8;
-  }
-  26%,
-  28% {
-    opacity: 0.2;
-  }
-  29%,
-  32% {
-    opacity: 0.7;
-  }
-  33%,
-  36% {
-    opacity: 0.5;
-  }
-  37%,
-  40% {
-    opacity: 0.8;
-  }
-  41%,
-  100% {
-    opacity: 0.2;
-  }
+  0%, 4% { opacity: 0.8; }
+  5%, 7% { opacity: 0.3; }
+  8%, 10% { opacity: 0.7; }
+  11%, 14% { opacity: 0.2; }
+  15%, 18% { opacity: 0.8; }
+  19%, 21% { opacity: 0.4; }
+  22%, 25% { opacity: 0.8; }
+  26%, 28% { opacity: 0.2; }
+  29%, 32% { opacity: 0.7; }
+  33%, 36% { opacity: 0.5; }
+  37%, 40% { opacity: 0.8; }
+  41%, 100% { opacity: 0.2; }
 }
+.animate-bombilla { animation: flicker 4s infinite ease-in-out; }
 
-.animate-bombilla {
-  animation: flicker 4s infinite ease-in-out;
-}
-
-/* Efecto flicker para el parpadeo de las habilidades */
+/* ── FLICKER HABILIDADES ── */
 @keyframes flickerHabilidades {
-  0%,
-  10% {
-    opacity: 0.8;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-  }
-  15%,
-  20% {
-    opacity: 0.4;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
-  }
-  25%,
-  30% {
-    opacity: 0.7;
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);
-  }
-  35%,
-  40% {
-    opacity: 0.3;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.15);
-  }
-  45%,
-  50% {
-    opacity: 0.6;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
-  }
-  55%,
-  60% {
-    opacity: 0.2;
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
-  }
-  65%,
-  70% {
-    opacity: 0.5;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
-  }
-  75%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
+  0%, 10% { opacity: 0.8; box-shadow: 0 0 8px rgba(56,189,248,0.3); }
+  15%, 20% { opacity: 0.4; box-shadow: none; }
+  25%, 30% { opacity: 0.7; box-shadow: 0 0 6px rgba(56,189,248,0.2); }
+  35%, 40% { opacity: 0.3; box-shadow: none; }
+  45%, 50% { opacity: 0.6; box-shadow: 0 0 5px rgba(56,189,248,0.2); }
+  55%, 60% { opacity: 0.2; box-shadow: none; }
+  65%, 70% { opacity: 0.5; box-shadow: 0 0 4px rgba(56,189,248,0.15); }
+  75%, 100% { opacity: 1; box-shadow: 0 0 10px rgba(56,189,248,0.4); }
 }
+h3 { animation: flickerHabilidades 2.5s infinite alternate; }
 
-h3 {
-  animation: flickerHabilidades 2.5s infinite alternate;
-}
-
-/* Clase de habilidades apagadas, con una opacidad baja */
 .habilidad {
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0.35;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Cuando la habilidad parpadea aleatoriamente */
-.habilidad.active {
-  animation: flickerHabilidades 2s infinite;
-}
-
+.habilidad.active { animation: flickerHabilidades 2s infinite; }
 .habilidad:hover {
   opacity: 1;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(56,189,248,0.3);
 }
 
-/* Animación de aparición para la sección de Habilidades */
+/* ── FLICKER CORREO ── */
+@keyframes parpadeocorreo {
+  0% { opacity: 1; }
+  20% { opacity: 0.6; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.6; }
+  80% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+.correo { animation: parpadeocorreo 2s infinite; }
+
+/* ── SECTION REVEAL ── */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal-section.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── ANIMATE ON SCROLL (habilidades) ── */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
 .animate-on-scroll.appear {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Efecto flicker para el parpadeo del correo electronico */
-@keyframes parpadeocorreo {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  40% {
-    opacity: 0.3;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
+/* ── SECTION TITLE LINE ── */
+.section-title-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.section-title-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 40px; height: 2px;
+  background: #38bdf8;
+  border-radius: 2px;
 }
 
-.correo {
-  animation: parpadeocorreo 2s infinite;
+/* ── TIMELINE ── */
+.timeline-dot {
+  transition: box-shadow 0.3s ease;
+}
+.timeline-item:hover .timeline-dot {
+  box-shadow: 0 0 10px currentColor;
 }
 
-/* Efecto del borde en la seccion experiencia laboral */
+/* ── TECH BADGES ── */
+.tech-badge {
+  font-family: "Goldman", serif;
+  font-size: 0.65rem;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(56,189,248,0.3);
+  color: #7dd3fc;
+  background: rgba(56,189,248,0.05);
+}
+
+/* ── SECCION (borde experiencia/contacto) ── */
 .seccion {
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 20px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── IMAGEN GLOW ── */
+.group:hover .absolute {
+  opacity: 0.5;
 }
