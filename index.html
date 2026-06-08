@@ -317,7 +317,11 @@
                 <!-- Zona imagen -->
                 <div class="project-img-wrap">
                   <!-- Sustituye el src por la ruta de tu captura cuando la tengas -->
-                  <img src="" alt="Captura PriceAlert" class="project-img" />
+                  <img
+                    src="./asserts/pricealert2.png"
+                    alt="Captura PriceAlert"
+                    class="project-img"
+                  />
                   <div class="project-img-placeholder">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -353,13 +357,23 @@
                         Rastreador de precios de Amazon con alertas por email
                       </p>
                     </div>
-                    <a
-                      href="https://github.com/A-Quiles/PriceAlert"
-                      target="_blank"
-                      class="btn-neon self-start whitespace-nowrap text-sm px-4 py-2"
-                    >
-                      Ver en GitHub
-                    </a>
+                    <div class="flex flex-col gap-2 self-start">
+                      <a
+                        href="https://github.com/A-Quiles/PriceAlert"
+                        target="_blank"
+                        class="btn-neon whitespace-nowrap text-sm px-4 py-2 text-center"
+                      >
+                        Ver en GitHub
+                      </a>
+                      <!-- Sustituye # por la URL de tu despliegue en Vercel -->
+                      <a
+                        href="https://pricealert.site/"
+                        target="_blank"
+                        class="btn-neon-magenta whitespace-nowrap text-sm px-4 py-2 text-center"
+                      >
+                        Visitar web
+                      </a>
+                    </div>
                   </div>
                   <p class="text-gray-400 text-sm leading-relaxed mb-5 flex-1">
                     Aplicación web completa que permite rastrear el historial de
@@ -480,6 +494,32 @@
         </div>
       </div>
     </footer>
+
+    <!-- Botón flotante CV -->
+    <a
+      href="./asserts/CV.pdf"
+      target="_blank"
+      id="cv-float"
+      class="cv-float-btn"
+      aria-label="Ver CV"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span>CV</span>
+    </a>
 
     <script src="scripts.js"></script>
   </body>

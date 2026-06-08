@@ -133,3 +133,34 @@ function activarHabilidadAleatoria() {
 }
 
 setInterval(activarHabilidadAleatoria, 2500);
+
+// Botón flotante CV: aparece al scrollear más de 70% de la primera pantalla
+(function () {
+  const btn = document.getElementById("cv-float");
+  if (!btn) return;
+  const threshold = window.innerHeight * 0.7;
+  function toggle() {
+    btn.classList.toggle("visible", window.scrollY > threshold);
+  }
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+})();
+
+// Scroll-spy: resalta el link activo del sidebar según la sección visible
+(function () {
+  const links = document.querySelectorAll(".sidebar-link");
+  if (!links.length) return;
+  const sections = Array.from(links)
+    .map((l) => document.getElementById(l.dataset.section))
+    .filter(Boolean);
+
+  function update() {
+    const scrollY = window.scrollY + window.innerHeight * 0.25;
+    let active = sections[0];
+    sections.forEach((s) => { if (s.offsetTop <= scrollY) active = s; });
+    links.forEach((l) => l.classList.toggle("active", l.dataset.section === (active && active.id)));
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
