@@ -415,6 +415,113 @@
                 </div>
               </div>
             </div>
+
+            <!-- Tarjeta 2: MDShare -->
+            <div class="carousel-slide">
+              <div
+                class="card-neon magenta rounded-lg overflow-hidden h-full flex flex-col"
+              >
+                <!-- Zona imagen -->
+                <div class="project-img-wrap magenta">
+                  <!-- Sustituye el src por la ruta de tu captura cuando la tengas -->
+                  <img
+                    src="./asserts/mdshare.png"
+                    alt="Captura MDShare"
+                    class="project-img"
+                  />
+                  <div class="project-img-placeholder magenta">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    <span>// SCREENSHOT //</span>
+                  </div>
+                </div>
+                <!-- Contenido -->
+                <div class="p-6 flex flex-col flex-1">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4"
+                  >
+                    <div>
+                      <div class="flex items-center gap-2 mb-1">
+                        <span class="project-num">02</span>
+                        <h3 class="text-2xl font-semibold neon-magenta">
+                          MDShare
+                        </h3>
+                      </div>
+                      <p class="text-gray-500 text-sm">
+                        Editor Markdown colaborativo en tiempo real
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-2 self-start">
+                      <a
+                        href="https://github.com/A-Quiles/MDshare"
+                        target="_blank"
+                        class="btn-neon-magenta whitespace-nowrap text-sm px-4 py-2 text-center"
+                      >
+                        Ver en GitHub
+                      </a>
+                      <a
+                        href="https://md-share-one.vercel.app"
+                        target="_blank"
+                        class="btn-neon whitespace-nowrap text-sm px-4 py-2 text-center"
+                      >
+                        Visitar web
+                      </a>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-sm leading-relaxed mb-5 flex-1">
+                    Aplicación full-stack que permite a varios usuarios editar
+                    documentos Markdown
+                    <span class="neon-magenta">simultáneamente</span> con
+                    sincronización en vivo mediante WebSockets. Los documentos
+                    son privados: el propietario invita colaboradores por email
+                    y revoca el acceso cuando quiere. El backend cachea el
+                    estado en memoria y lo persiste cada 5 segundos.
+                  </p>
+                  <div
+                    class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 text-xs text-gray-500"
+                  >
+                    <div class="flex flex-col gap-1">
+                      <span class="neon-magenta text-xs">Tiempo real</span
+                      ><span>WebSockets STOMP</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="neon-magenta text-xs">Privacidad</span
+                      ><span>Invitación por email</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="neon-magenta text-xs">Previsualización</span
+                      ><span>Markdown + DOMPurify</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="neon-magenta text-xs">Persistencia</span
+                      ><span>Diferida cada 5s</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="tech-badge">Angular 19</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">Java 21</span>
+                    <span class="tech-badge">Spring Boot 3.5</span>
+                    <span class="tech-badge">WebSockets</span>
+                    <span class="tech-badge">Supabase</span>
+                    <span class="tech-badge">Vercel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /carousel-track -->
         </div>
